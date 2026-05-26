@@ -6,9 +6,9 @@ workflows:
       node: v18
     scripts:
       - name: Install dependencies
-        script: pnpm install
+        script: yarn install
       - name: Sync Capacitor
-        script: pnpm exec cap sync android
+        script: yarn cap sync android
       - name: Build Android APK
         script: |
           cd android
