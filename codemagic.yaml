@@ -6,9 +6,11 @@ workflows:
       node: v18
     scripts:
       - name: Install dependencies
-        script: yarn install --no-immutable
+        script: npm install --legacy-peer-deps
+      - name: Build for Capacitor
+        script: npm run build:cap
       - name: Sync Capacitor
-        script: yarn cap sync android
+        script: npx cap sync android
       - name: Build Android APK
         script: |
           cd android
