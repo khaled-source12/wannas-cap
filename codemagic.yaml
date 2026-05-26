@@ -6,7 +6,9 @@ workflows:
       node: v18
     scripts:
       - name: Install dependencies
-        script: npm install --legacy-peer-deps
+        script: |
+          rm -f package-lock.json
+          npm install --legacy-peer-deps
       - name: Build for Capacitor
         script: npm run build:cap
       - name: Sync Capacitor
