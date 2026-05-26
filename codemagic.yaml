@@ -8,7 +8,9 @@ workflows:
       - name: Install dependencies
         script: |
           rm -f package-lock.json
-          npm install --legacy-peer-deps --include=optional --force
+          npm install --legacy-peer-deps
+      - name: Fix Tailwind native binding
+        script: npm rebuild @tailwindcss/oxide
       - name: Build for Capacitor
         script: npm run build:cap
       - name: Sync Capacitor
