@@ -79,4 +79,7 @@
     "@capacitor/ios": "^8.3.4",
     "@tanstack/react-router": "^1.170.7"
   }
+  "@tanstack/react-router": "^1.170.7"
+  }
+
 }
