@@ -77,9 +77,14 @@
     "@capacitor/cli": "^8.3.4",
     "@capacitor/core": "^8.3.4",
     "@capacitor/ios": "^8.3.4",
-    "@tanstack/react-router": "^1.170.7"
+"@tanstack/react-router": "^1.170.7"
+  },
+  "optionalDependencies": {
+    "@tailwindcss/oxide-darwin-arm64": "*",
+    "@tailwindcss/oxide-darwin-x64": "*",
+    "@tailwindcss/oxide-linux-x64-gnu": "*",
+    "@tailwindcss/oxide-linux-arm64-gnu": "*"
   }
-  "@tanstack/react-router": "^1.170.7"
-  }
+}
 
 }
