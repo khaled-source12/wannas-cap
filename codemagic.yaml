@@ -6,12 +6,16 @@ workflows:
       node: v18
     scripts:
       - name: Install dependencies
-        script: yarn install
+        script: |
+          cd $CM_BUILD_DIR
+          yarn install --no-immutable
       - name: Sync Capacitor
-        script: yarn cap sync android
+        script: |
+          cd $CM_BUILD_DIR
+          yarn cap sync android
       - name: Build Android APK
         script: |
-          cd android
+          cd $CM_BUILD_DIR/android
           chmod +x gradlew
           ./gradlew assembleDebug
     artifacts:
